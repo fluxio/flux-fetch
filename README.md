@@ -82,8 +82,12 @@ function handleRequestError(error) {
 
 ## Publishing a New Version
 
+This assumes that dependencies have been installed with `npm install`.
+
 1. Increment the version in `package.json` using [Semver](http://semver.org/)
 1. `npm run prepublish`
 1. `git add package.json && git commit -m 'Update to version <version>'`
 1. `git tag v<version>`
 1. `git push && git push --tags`
+1. `npm publish`
+
